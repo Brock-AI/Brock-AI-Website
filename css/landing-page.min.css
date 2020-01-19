@@ -87,7 +87,8 @@ header.masthead h1 {
 .call-to-action {
 	position: relative;
 	background-color: #343a40;
-	background: url(../img/bg-cta-2.jpg) no-repeat center center;
+	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+		url(../img/bg-cta-2.jpg) no-repeat center center;
 	background-size: cover;
 	padding-top: 7rem;
 	padding-bottom: 7rem;
