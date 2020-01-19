@@ -45,6 +45,9 @@ header.masthead h1 {
 		font-size: 3rem;
 	}
 }
+.text-primary{
+	color:red!important;
+}
 .showcase .showcase-text {
 	padding: 3rem;
 }
