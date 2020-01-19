@@ -54,54 +54,21 @@
         return await (await fetch(url)).text();
       }
 
-      async function loadNavigation() {
-      console.log("Navigation loading");
-        const contentDiv = document.getElementById("Navigation");
-        contentDiv.innerHTML = await fetchHtmlAsText("buildhtml/navigation-bar.html");
+      async function loadFile(fileID, filePath){
+        console.log(`${fileID} loading...`);
+        const contentDiv = document.getElementById(fileID);
+        contentDiv.innerHTML = await fetchHtmlAsText(filePath)
+          .catch(err => console.log(err));
       }
+
+      loadFile("Navigation", "buildhtml/navigation-bar.html");
+      loadFile("Masthead", "buildhtml/masthead.html");
+      loadFile("IconsGrid", "buildhtml/iconsgrid.html");
+      loadFile("ImageShowcases", "buildhtml/image-showcase.html");
+      loadFile("Testimonials", "buildhtml/testimonials.html");
+      loadFile("CallToAction", "buildhtml/call-to-action.html");
+      loadFile("Footer", "buildhtml/footer.html");
       
-      async function loadMasthead() {
-        console.log("masthead loading");
-        const contentDiv = document.getElementById("Masthead");
-        contentDiv.innerHTML = await fetchHtmlAsText("buildhtml/masthead.html");
-      }
-   
-      async function loadIconsGrid() {
-        console.log("IconsGrid loading");
-        const contentDiv = document.getElementById("IconsGrid");
-        contentDiv.innerHTML = await fetchHtmlAsText("buildhtml/iconsgrid.html");
-      }
-
-      async function loadImageShowcase() {
-        console.log("ImageShowcases loading");
-        const contentDiv = document.getElementById("ImageShowcases");
-        contentDiv.innerHTML = await fetchHtmlAsText("buildhtml/image-showcase.html");
-      }
-
-      async function loadTestimonials() {
-        console.log("Testimonials loading");
-        const contentDiv = document.getElementById("Testimonials");
-        contentDiv.innerHTML = await fetchHtmlAsText("buildhtml/testimonials.html");
-      }
-     
-      async function loadCallToAction() {
-        console.log("CallToAction loading");
-        const contentDiv = document.getElementById("CallToAction");
-        contentDiv.innerHTML = await fetchHtmlAsText("buildhtml/call-to-action.html");
-      }
-
-      async function loadFooter() {
-        console.log("Footer loading");
-        const contentDiv = document.getElementById("Footer");
-        contentDiv.innerHTML = await fetchHtmlAsText("buildhtml/footer.html");
-      }
-      loadNavigation();
-      loadMasthead();
-      loadIconsGrid();
-      loadImageShowcase();
-      loadTestimonials();
-      loadCallToAction();
-      loadFooter();
     </script>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
