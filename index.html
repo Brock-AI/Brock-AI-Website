@@ -39,6 +39,16 @@
 
     <!-- Masthead -->
     <div id="Masthead"></div>
+    <!-- Icons Grid -->
+    <div id="IconsGrid"></div>
+    <!-- Image Showcases -->
+    <div id="ImageShowcases"></div>
+    <!-- Testimonials -->
+    <div id="Testimonials"></div>
+    <!-- Call to Action -->
+    <div id="CallToAction"></div>
+    <!-- Footer -->
+    <div id="Footer"></div>
 
     <script>
     /**
@@ -54,41 +64,11 @@
         const contentDiv = document.getElementById("Masthead");
         contentDiv.innerHTML = await fetchHtmlAsText("buildhtml/masthead.html");
       }
-
-      loadMasthead();
-    
-    </script>
-    <!-- Icons Grid -->
-    <div id="IconsGrid"></div>
-
-    <script>
-      /**
-      * @param {String} url - address for the HTML to fetch
-      * @return {String} the resulting HTML string fragment
-      */
-      async function fetchHtmlAsText(url) {
-        return await (await fetch(url)).text();
-      }
-
+   
       async function loadIconsGrid() {
         console.log("IconsGrid loading");
         const contentDiv = document.getElementById("IconsGrid");
         contentDiv.innerHTML = await fetchHtmlAsText("buildhtml/iconsgrid.html");
-      }
-
-      loadIconsGrid();
-
-    </script>
-    <!-- Image Showcases -->
-    <div id="ImageShowcases"></div>
-
-    <script>
-      /**
-      * @param {String} url - address for the HTML to fetch
-      * @return {String} the resulting HTML string fragment
-      */
-      async function fetchHtmlAsText(url) {
-        return await (await fetch(url)).text();
       }
 
       async function loadImageShowcase() {
@@ -97,68 +77,28 @@
         contentDiv.innerHTML = await fetchHtmlAsText("buildhtml/image-showcase.html");
       }
 
-      loadImageShowcase();
-
-    </script>
-    <!-- Testimonials -->
-    <div id="Testimonials"></div>
-
-    <script>
-      /**
-      * @param {String} url - address for the HTML to fetch
-      * @return {String} the resulting HTML string fragment
-      */
-      async function fetchHtmlAsText(url) {
-        return await (await fetch(url)).text();
-      }
-
       async function loadTestimonials() {
         console.log("Testimonials loading");
         const contentDiv = document.getElementById("Testimonials");
         contentDiv.innerHTML = await fetchHtmlAsText("buildhtml/testimonials.html");
       }
-
-      loadTestimonials();
-
-    </script>
-    <!-- Call to Action -->
-    <div id="CallToAction"></div>
-
-    <script>
-      /**
-      * @param {String} url - address for the HTML to fetch
-      * @return {String} the resulting HTML string fragment
-      */
-      async function fetchHtmlAsText(url) {
-        return await (await fetch(url)).text();
-      }
-
+     
       async function loadCallToAction() {
         console.log("CallToAction loading");
         const contentDiv = document.getElementById("CallToAction");
         contentDiv.innerHTML = await fetchHtmlAsText("buildhtml/call-to-action.html");
       }
 
-      loadCallToAction();
-    </script>
-    <!-- Footer -->
-    <div id="Footer"></div>
-
-    <script>
-      /**
-      * @param {String} url - address for the HTML to fetch
-      * @return {String} the resulting HTML string fragment
-      */
-      async function fetchHtmlAsText(url) {
-        return await (await fetch(url)).text();
-      }
-
-      async function loadFooter() {
+        async function loadFooter() {
         console.log("Footer loading");
         const contentDiv = document.getElementById("Footer");
         contentDiv.innerHTML = await fetchHtmlAsText("buildhtml/footer.html");
       }
-
+      loadMasthead();
+      loadIconsGrid();
+      loadImageShowcase();
+      loadTestimonials();
+      loadCallToAction();
       loadFooter();
     </script>
     <!-- Bootstrap core JavaScript -->
