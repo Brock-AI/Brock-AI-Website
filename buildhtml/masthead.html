@@ -2,14 +2,43 @@
 
 <style>
 #tint{
-    text-shadow: 0 0 2px #000; /* horizontal-offset vertical-offset 'blur' colour */
-  -moz-text-shadow: 0 0 2px #000;
-  -webkit-text-shadow: 0 0 2px #000;
+    text-shadow: 0 0 2px rgb(0, 0, 0); /* horizontal-offset vertical-offset 'blur' colour */
+  -moz-text-shadow: 0 0 2px rgb(0, 0, 0);
+  -webkit-text-shadow: 0 0 2px rgb(0, 0, 0);
 }
-</style>
 
-<header class="masthead text-white text-center">
-    <div class="overlay"></div>
+#fixed-bg {
+  /* Set a specified height, or the minimum height for the background image */
+  min-height: 843px;
+
+  /* Set background image to fixed (don't scroll along with the page) */
+  background-attachment: fixed;
+
+  /* Center the background image */
+  background-position: center;
+
+  /* Set the background image to no repeat */
+  background-repeat: no-repeat;
+
+  /* Scale the background image to be as large as possible */
+  background-size: cover;
+}
+/*
+.overlay {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.7); 
+}
+*/
+
+</style>
+<header class="masthead overlay text-white text-center" id="fixed-bg">
+    <div></div>
     <div class="container">
         <div class="row">
             <div class="col-xl-9 mx-auto">
@@ -25,6 +54,7 @@
                     </div>
                 </form>
             </div>
+
         </div>
     </div>
 </header>
