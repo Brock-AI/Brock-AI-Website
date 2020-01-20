@@ -53,6 +53,10 @@ header.masthead h1 {
 		font-size: 3rem;
 	}
 }
+
+@media (min-width: 1200px){
+	.container{
+		max-width: 4000px;}}
 .text-primary{
 	color:red!important;
 }
