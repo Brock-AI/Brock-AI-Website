@@ -15,6 +15,11 @@ h6 {
 	font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 700;
 }
+
+#navbar-container{
+	margin: 0;		
+}
+
 header.masthead {
 	position: relative;
 	background-color: #343a40;
