@@ -17,7 +17,10 @@ h6 {
 }
 
 #navbar-container{
-	margin: 0;		
+	margin-left: 0;
+	margin-right:0;
+	padding-left:0;
+	padding-right:0;
 }
 
 header.masthead {
