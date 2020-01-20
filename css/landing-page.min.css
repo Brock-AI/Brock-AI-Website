@@ -54,7 +54,7 @@ header.masthead h1 {
 	}
 }
 
-@media (min-width: 1200px){
+@media (min-width: 480px){
 	.container{
 		max-width: 4000px;}}
 .text-primary{
